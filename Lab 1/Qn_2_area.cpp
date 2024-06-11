@@ -17,7 +17,7 @@ int main()
     cout<<fixed<<setprecision(5);
     cout<<"The area of circle is "<<area<<"\n";
     circumference = 2*pi*radius;
-    cout<<"The circumference of circle is "<<area<<"\n";
+    cout<<"The circumference of circle is "<<circumference<<"\n";
     cout<<"\n";
 
     cout<<"For rectangle\n";
@@ -29,7 +29,7 @@ int main()
     area = length*breadth;
     cout<<"The area of rectangle is "<<area<<"\n";
     perimeter = 2*(length+breadth);
-    cout<<"The perimeter of circle is "<<perimeter<<"\n";
+    cout<<"The perimeter of rectangle is "<<perimeter<<"\n";
     cout<<"\n";
 
     cout<<"For square\n";
@@ -37,9 +37,9 @@ int main()
     cin>>length;
     
     area = length*length;
-    cout<<"The area of rectangle is "<<area<<"\n";
+    cout<<"The area of square is "<<area<<"\n";
     perimeter = 4* length;
-    cout<<"The perimeter of circle is "<<perimeter<<"\n";
+    cout<<"The perimeter of square is "<<perimeter<<"\n";
 
     
 }
