@@ -1,3 +1,4 @@
+//WAP to calculate area and circumference of circle, rectangle and square (area, perimeter) also.
 #include<iostream>
 #include<cmath>
 #include<iomanip>

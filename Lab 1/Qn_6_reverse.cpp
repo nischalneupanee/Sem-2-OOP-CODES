@@ -1,3 +1,4 @@
+//Write a C++ program to reverse a given number.
 #include<iostream>
 using namespace std;
 int main()
