@@ -1,3 +1,4 @@
+//Write a C++ program to add two numbers using functions.
 #include<iostream>
 using namespace std;
 
