@@ -18,3 +18,13 @@ int main()
 
     return 0;
 }
+
+//WAP to demonstrate the concept of Default values in functions Arguments 
+#include<iostream>
+using namespace std;
+
+ int main()
+ {
+    
+ }
+
