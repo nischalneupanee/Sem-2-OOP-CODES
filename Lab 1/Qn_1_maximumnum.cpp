@@ -1,3 +1,4 @@
+//WAP to input 5 numbers and find the maximum number.
 #include<iostream>
 using namespace std;
 

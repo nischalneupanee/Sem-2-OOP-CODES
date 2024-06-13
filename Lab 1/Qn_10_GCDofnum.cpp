@@ -1,3 +1,4 @@
+//Write a C++ program to find the GCD of two numbers.
 #include<iostream>
 using namespace std;
 

@@ -1,3 +1,4 @@
+//Write a C++ program to demonstrate the usage of scope resolution operator.
 #include<iostream>
 using namespace std;
 
