@@ -5,7 +5,7 @@ It is the practical codes given for Bsc.CSIT Students to solve during their 2nd 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at https://nischalneupane.name.np
+If you have any feedback, please reach out to me at https://nischalneupane.name.np
 
 
 ## Authors
