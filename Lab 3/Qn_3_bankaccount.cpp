@@ -4,69 +4,95 @@ member functions to:
 
 
 Initialize the account with an account number, account holder's name, and
-initial balance.*/
+initial balance.
+
+
+Deposit an amount into the account.
+
+
+Withdraw an amount from the account.
+
+
+Check the current balance.*/
 #include <iostream>
 using namespace std;
 
-class BankAccount {
+class BankAccount
+{
 private:
     int account_number;
     string account_holder_name;
     double balance;
 
 public:
-    void initialize(int acc_number, const string& holder_name) {
+    void initialize(int acc_number, const string &holder_name, double initial_balance)
+    {
         account_number = acc_number;
         account_holder_name = holder_name;
-        balance = 0.0;
+        balance = initial_balance;
     }
 
-    void display() const {
+    void display() const
+    {
         cout << "Account Number: " << account_number << "\n";
         cout << "Account Holder Name: " << account_holder_name << "\n";
         cout << "Balance: " << balance << "\n";
     }
 
-    void deposit(double amount) {
-        if (amount > 0) {
+    void deposit(double amount)
+    {
+        if (amount > 0)
+        {
             balance += amount;
             cout << "Deposited: " << amount << "\n";
-        } else {
+        }
+        else
+        {
             cout << "Invalid amount to deposit.\n";
         }
     }
 
-    void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
+    void withdraw(double amount)
+    {
+        if (amount > 0 && amount <= balance)
+        {
             balance -= amount;
             cout << "Withdrew: " << amount << "\n";
-        } else {
+        }
+        else
+        {
             cout << "Invalid amount to withdraw or insufficient funds.\n";
         }
     }
 
-    double getBalance() const {
+    double getBalance() const
+    {
         return balance;
     }
 };
 
-int main() {
+int main()
+{
     BankAccount account;
     int acc_number;
     string holder_name;
+    double initial_balance;
 
     cout << "Enter account number: ";
     cin >> acc_number;
     cout << "Enter account holder name: ";
     cin.ignore();
     getline(cin, holder_name);
+    cout << "Enter initial balance: ";
+    cin >> initial_balance;
 
-    account.initialize(acc_number, holder_name);
+    account.initialize(acc_number, holder_name, initial_balance);
 
     int choice;
     double amount;
 
-    do {
+    do
+    {
         cout << "\nBank Account Menu:\n";
         cout << "1. Deposit\n";
         cout << "2. Withdraw\n";
@@ -76,28 +102,29 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
-        switch (choice) {
-            case 1:
-                cout << "Enter amount to deposit: ";
-                cin >> amount;
-                account.deposit(amount);
-                break;
-            case 2:
-                cout << "Enter amount to withdraw: ";
-                cin >> amount;
-                account.withdraw(amount);
-                break;
-            case 3:
-                cout << "Current Balance: " << account.getBalance() << "\n";
-                break;
-            case 4:
-                account.display();
-                break;
-            case 5:
-                cout << "Exiting...\n";
-                break;
-            default:
-                cout << "Invalid choice. Please try again.\n";
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter amount to deposit: ";
+            cin >> amount;
+            account.deposit(amount);
+            break;
+        case 2:
+            cout << "Enter amount to withdraw: ";
+            cin >> amount;
+            account.withdraw(amount);
+            break;
+        case 3:
+            cout << "Current Balance: " << account.getBalance() << "\n";
+            break;
+        case 4:
+            account.display();
+            break;
+        case 5:
+            cout << "Exiting...\n";
+            break;
+        default:
+            cout << "Invalid choice. Please try again.\n";
         }
     } while (choice != 5);
 
