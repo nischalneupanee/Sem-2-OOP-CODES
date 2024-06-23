@@ -16,12 +16,12 @@ public:
     void set()
     {
         cout << "Enter the data of student\n";
-        cout<<"Name :";
-        cin>>name;
-        cout<<"Roll Number: ";
-        cin>>roll_number;
-        cout<<"Enter Marks:\n";
-        for (int i = 1; i <= 5; i++)
+        cout << "Name: ";
+        cin >> name;
+        cout << "Roll Number: ";
+        cin >> roll_number;
+        cout << "Enter Marks:\n";
+        for (int i = 0; i < 5; i++)
         {
             cin >> marks[i];
         }
@@ -29,25 +29,21 @@ public:
 
     void get()
     {
-        cout<<"\n\n\n";
-        cout<<"Name :";
-        cout<<name<<"\n";
-        cout<<"Roll Number: ";
-        cout<<roll_number<<"\n";
-        int result = averageMarks();
-        cout << "The average marks of the student is: " << result;
+        cout << "\n\n\n";
+        cout << "Name: " << name << "\n";
+        cout << "Roll Number: " << roll_number << "\n";
+        float result = averageMarks();
+        cout << "The average marks of the student is: " << result << "\n";
     }
 
     float averageMarks()
     {
         int sum = 0;
-        for (int i = 1; i <= 5; i++)
+        for (int i = 0; i < 5; i++)
         {
             sum += marks[i];
         }
-
-        float average = sum / 5;
-        return average;
+        return static_cast<float>(sum) / 5;
     }
 };
 
@@ -56,4 +52,5 @@ int main()
     Student s1;
     s1.set();
     s1.get();
+    return 0;
 }
