@@ -21,7 +21,7 @@ int main()
     int y = 200;
     cout << "Before sorting x = " << x << "y = " << y << endl;
     swap(x, y);
-    cout << "Before sorting x = " << x << "y = " << y << endl;
+    cout << "After sorting x = " << x << "y = " << y << endl;
 
     cout << "Before increment: x = " << x << std::endl;
     int &result = increment(x);
