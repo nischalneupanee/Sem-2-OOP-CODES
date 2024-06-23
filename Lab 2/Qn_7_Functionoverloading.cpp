@@ -28,4 +28,5 @@ int main()
     cout << "Greater is " << max(f1, f2) << endl;
     char c1 = 'a', c2 = 'A';
     cout << "Greater is " << max(c1, c2) << endl;
+    return 0;
 }
