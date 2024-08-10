@@ -1,4 +1,11 @@
-// User defined to basic type
+// 3. User defined to user defined
+
+// i. Conversion routine in source
+// object
+
+// ii. Conversion routine in
+// destination object
+
 
 #include <iostream>
 using namespace std;
@@ -84,16 +91,54 @@ public:
     }
 };
 
+class Complex
+{
+private:
+    int real, imag;
+
+public:
+    Complex(int real = 0, int imag = 0) : real(real), imag(imag) {}
+
+    void show() const
+    {
+        cout << "Complex number: " << real << " + " << imag << "i" << endl;
+    }
+
+    operator int() const
+    {
+        return real;
+    }
+
+    operator Matrix() const
+    {
+        Matrix temp(1, 1);
+        temp.read();
+        return temp;
+    }
+};
+
 int main()
 {
-    Matrix m1(2, 2), m2(2, 2);
+    Matrix m1(2, 2), m2(2, 2), m3;
+    Complex c1(2, 3), c2(3, 4);
+
     m1.read();
     m2.read();
-    cout << "Matrix 1: " << endl;
-    m1.show();
-    cout << "Matrix 2: " << endl;
-    m2.show();
-    cout << "Sum of elements of Matrix 1: " << int(m1) << endl;
-    cout << "Sum of elements of Matrix 2: " << int(m2) << endl;
+
+    m3 = m1 + m2;
+    m3.show();
+
+    m3 = m1 * m2;
+    m3.show();
+
+    int sum = m1;
+    cout << "Sum of elements of m1: " << sum << endl;
+
+    int real = c1;
+    cout << "Real part of c1: " << real << endl;
+
+    Matrix m4 = c2;
+    m4.show();
+
     return 0;
 }
